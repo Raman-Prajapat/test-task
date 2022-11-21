@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 const NotFound = () => {
+  
   return (
     <section className="flex justify-center items-center flex-col min-h-screen">
       <div className="container">
