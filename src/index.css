@@ -1,0 +1,328 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+@layer base{
+    input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background: transparent !important;
+  transition: background 5000s ease-in;
+}
+/* @font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato-Hairline.woff");
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato-Heavy.woff");
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato-Medium.woff");
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato-Semibold.woff");
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato-Thin.woff");
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato-Light.woff");
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato-Regular.woff");
+  }
+
+  @font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato-Bold.woff");
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("../public/fonts/Lato-Black.woff");
+  } */
+
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply transition duration-200 px-3 h-[40px] py-2 border-[1.6px] border-input-1/20 font-medium w-full  bg-transparent rounded-lg  placeholder-white;
+  }
+  [type="text"]:focus,
+  [type="email"]:focus,
+  [type="url"]:focus,
+  [type="password"]:focus,
+  [type="number"]:focus,
+  [type="date"]:focus,
+  [type="datetime-local"]:focus,
+  [type="month"]:focus,
+  [type="search"]:focus,
+  [type="tel"]:focus,
+  [type="time"]:focus,
+  [type="week"]:focus,
+  [multiple]:focus,
+  textarea:focus,
+  select:focus,
+  [type="text"]:focus-visible,
+  [type="email"]:focus-visible,
+  [type="url"]:focus-visible,
+  [type="password"]:focus-visible,
+  [type="number"]:focus-visible,
+  [type="date"]:focus-visible,
+  [type="datetime-local"]:focus-visible,
+  [type="month"]:focus-visible,
+  [type="search"]:focus-visible,
+  [type="tel"]:focus-visible,
+  [type="time"]:focus-visible,
+  [type="week"]:focus-visible,
+  [multiple]:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply border-gradient-pink  shadow-none;
+    --tw-ring-color: unset !important;
+    --tw-ring-shadow: unset !important;
+    outline: unset !important;
+  }
+
+  tbody {
+    display: block;
+    max-height: 320px;
+    overflow: auto;
+  }
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+ 
+  * {
+    line-height: 1.25;
+    font-style: normal;
+    font-size: 16px;
+  }
+  svg {
+    font-size: inherit;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply break-words;
+  }
+  a {
+    @apply no-underline ;
+  }
+  h1{
+    @apply font-black  font-manrope text-[26px] tablet:text-[50px] md:text-[52px] lg:text-[54px] leading-[1.1] !important;
+    line-height: 1.25;
+
+  }
+  h2{
+    @apply font-bold font-manrope tablet:text-[30px] text-[22px] !important;
+    line-height: 1.25;
+  }
+  h3 {
+    @apply font-bold  font-manrope text-[20px] tablet:text-[24px]  !important;
+    line-height: 1.25;
+  }
+  h4 {
+    @apply  font-bold font-manrope text-[20px] tablet:text-[30px]  !important;
+    line-height: 1.25;
+  }
+  h5 {
+    @apply font-bold font-manrope text-[18px] tablet:text-[24px]  !important;
+    line-height: 1.25;
+  }
+  h6 {
+    @apply font-bold  font-manrope text-[16px] tablet:text-[16px]  !important;
+    line-height: 1.25;
+  }
+  .h1{
+    @apply font-black  font-manrope text-[26px] tablet:text-[50px] md:text-[52px] lg:text-[54px] leading-[1.1];
+    line-height: 1.25;
+
+  }
+  .h2{
+    @apply font-bold font-manrope tablet:text-[30px] text-[22px];
+    line-height: 1.25;
+  }
+  .h3 {
+    @apply font-bold  font-manrope text-[20px] tablet:text-[24px] ;
+    line-height: 1.25;
+  }
+  .h4 {
+    @apply  font-semibold font-manrope text-[20px] tablet:text-[30px] ;
+    line-height: 1.25;
+  }
+  .h5 {
+    @apply font-semibold font-manrope text-[18px] tablet:text-[24px] ;
+    line-height: 1.25;
+  }
+  .h6 {
+    @apply font-semibold  font-manrope text-[16px] tablet:text-[16px] ;
+    line-height: 1.25;
+  }
+
+  p {
+    @apply text-[16px] font-normal;
+    line-height: 1.3;
+  }
+  a {
+    text-decoration: none;
+    @apply text-inherit ;
+  }
+  .container {
+    @apply mx-auto xxl:max-w-[1550px] tablet:max-w-[700px] md:max-w-[900px] lg:max-w-[1250px] xl:max-w-[1275px] px-6 tablet:px-0 sm:max-w-full !important;
+  }
+
+}
+@layer components{
+    .center{
+        @apply flex justify-center items-center;
+    }
+    .subtitle1{
+      @apply text-[19px] ;
+    }
+    .subtitle2{
+      @apply text-[21px] ;
+    }
+    .body1{
+      @apply text-[17px] ;
+    }
+    .body2{
+      @apply text-[18px] ;
+    }
+    .btn{
+        @apply h-[52px] px-10 center rounded-xl  font-semibold capitalize text-gray-900 transition duration-300;
+    }
+    .btn-primary{
+        @apply bg-primary-500 text-white ;
+    }
+    .btn-primary:hover{
+        @apply text-primary-500 bg-white ;
+    }
+    .btn-primary-outline{
+        @apply border border-primary-500 text-black ;
+    }
+    .btn-secondary{
+        @apply bg-secondary-500 text-white ;
+    }
+    .btn-secondary:hover{
+        @apply text-secondary-500 bg-white ;
+    }
+    .btn-secondary-outline{
+        @apply border border-secondary-500 text-black ;
+    }
+    .gradient-pink{
+      @apply bg-gradient-to-r from-gradient-pink to-gradient-voilet;
+    }
+    .text-gradient-pink{
+      -webkit-text-fill-color: transparent;
+      @apply bg-gradient-to-r from-gradient-pink to-gradient-voilet;
+    -webkit-background-clip: text;
+    }
+    .brands label{
+      cursor: pointer;
+    }
+    .brands label span{
+      @apply w-6 h-6 border rounded-[4px] border-gray-4 center;
+    }
+    .brands label span i{
+      @apply hidden;
+    }
+    .brands label input:checked ~ span{
+      @apply gradient-pink text-white border-gradient-pink;
+    }
+    .brands label input:checked ~ span i{
+      @apply flex;
+    }
+    .brands label input:checked ~ .name{
+      @apply text-gradient-pink font-bold ;
+    }
+
+   
+    .gradient-btn{
+      @apply gradient-pink w-full rounded-md py-[14px] px-8 font-bold center text-white ;
+    }
+   
+  .gradient-pink-lighter{
+    background: linear-gradient(107.73deg, #D81F5A 0%, #8438BF 100%);
+    @apply bg-opacity-[0.05];
+
+  }
+  .footer-gradient{
+    background: linear-gradient(107.73deg, #2B1E2F 0%, #2A1630 46.88%, #451121 100%);
+  }
+  .gradient-border{
+    box-shadow: 0 0 1px 1px #D81F5A, 0 0 1px 1px #8438BF;
+
+  }
+  .sort-by{
+    @apply h-[40px] min-w-[200px] rounded-md  cursor-pointer transition-[height] overflow-hidden;
+    box-shadow: 0 0 0.5px 0.5px #D81F5A, 0 0 1px 1px #8438BF;
+
+  }
+  .sort-by.active{
+    height: auto;
+  }
+
+}
+
+
+.chakra-slider  .chakra-slider__thumb{
+ width: 20px;
+ height: 20px;
+  border: 3px solid #D81F5A;
+}
+.chakra-slider  .chakra-slider__thumb:focus{
+ box-shadow: 0 0 2px #D81F5A !important;
+}
+.accordion-button:not(.collapsed) {
+  color: #000000;
+  font-weight: 700;
+  background-color: #fff;
+  box-shadow: inset 0 -1px 0 #e5e7eb;
+}
+.collapse{
+visibility: visible !important;
+
+}
+.chakra-accordion__button{
+  padding: 14px 10px !important;
+}
+
+.chakra-accordion__button:focus{
+  box-shadow: unset !important;
+}
+.chakra-modal__content-container{
+  width: 100% !important;
+  height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
